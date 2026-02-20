@@ -1,0 +1,219 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(./backgroundpic.avif) no-repeat center fixed;
+    background-size: cover;
+}
+.main{
+    width: 600px;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    border-radius: 10px;
+    margin-left: -400px;
+}
+.floor{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    position: relative;
+    border-radius: 20px;
+}
+.btn{
+    height: 100px;
+    width: 100px;    
+    background-color: green;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 50px;
+}
+.elevatorr{
+    height: 100px;
+    width: 80px;
+    background-color: black;
+    position: absolute;
+    margin-top: 480px;
+    margin-left: 60px;
+    border-radius: 15px;
+    transition: transform 3s ease-in-out;
+}
+
+.elevatorr .left{
+    margin-left:0%;
+     position: absolute;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    background-color: silver;
+    transition: transform 4s ease-in-out;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.elevatorr .right{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    right:0%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    background-color: silver;
+    transition: transform 4s ease-in-out;
+}
+.elevatorr.open .left{
+    transform: translateX(-100%);
+}
+.elevatorr.open .right{
+    transform: translateX(100%);
+}
+.elevatorr.close .left{
+    transform: translateX(0px);
+}
+.elevatorr.close .right{
+    transform: translateX(0px);
+}
+.person{
+    position: absolute;
+    left: 1300px;
+    top: 350px;
+    animation: moveperson 7s linear forwards
+}
+.head{
+    height: 70px;
+    width: 70px;
+    background-color: pink;
+    border-radius: 50%;
+    position: relative;
+    border: 1px solid rgb(196, 147, 155);
+}
+.eye1{
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: black;
+    top: 20px;
+    left: 20px;
+    position: absolute;
+}
+.eye2{
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: black;
+    top: 20px;
+    left: 40px;
+    position: absolute;
+}
+.nose{
+    height: 15px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: black;
+    top: 30px;
+    left: 31px;
+    position: absolute;
+}
+.mouth{
+    height: 4px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: black;
+    top: 55px;
+    left: 25px;
+    position: absolute;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.body{
+    height: 100px;
+    width: 50px;
+    background-color: pink;
+    margin-left: 10px;
+    border-radius: 20px;
+    border: 1px solid rgb(196, 147, 155);
+}
+.hands{
+    position: relative;
+}
+.hand1{
+    position: absolute;
+    height: 20px;
+    width: 100px;
+    rotate: 90deg;
+    background-color: pink;
+    top: 0px;
+    left: 10px;
+    border-radius: 20px;
+    border: 1px solid rgb(196, 147, 155);
+    transform-origin: left top;
+    animation: marjvenaxeli 1s ease-in-out  7.5 forwards;
+}
+.hand2{
+    position: absolute;
+    height: 20px;
+    width: 100px;
+    rotate: -90deg;
+    background-color: pink;
+    top: 0px;
+    left: -65px;
+    border-radius: 20px;
+    border: 1px solid rgb(196, 147, 155);
+    transform-origin: right top;
+    animation: marcxenaxeli 1s ease-in-out  7.5 forwards;
+}
+.feet{
+    position: relative;
+}
+.foot1{
+    position: absolute;
+    height: 160px;
+    width: 20px;
+    background-color: pink;
+    top: 100px;
+    left: 25px;
+    border-radius: 20px;
+    border: 1px solid rgb(196, 147, 155);
+    transform-origin: top center;
+   animation: marcxena 1s ease-in-out  7.5 forwards;
+}
+.foot2{
+    position: absolute;
+    height: 160px;
+    width: 20px;
+    background-color: pink;
+    top: 100px;
+    left: 0px;
+    border-radius: 20px;
+    border: 1px solid rgb(196, 147, 155);
+    transform-origin: top center;
+    animation: marjvena 1s ease-in-out  7.5 forwards;
+}
+
+@keyframes marcxena {
+    from { transform: rotate(25deg); }
+    to   { transform: rotate(-25deg); }
+}
+
+@keyframes marjvena {
+    from { transform: rotate(-25deg); }
+    to   { transform: rotate(25deg); }
+}
+@keyframes moveperson {
+    from { left: 1300px; }
+    to   { left: 730px; }
+}
+@keyframes marcxenaxeli{
+    from{transform: rotate(-40deg);}
+    to{transform: rotate(40deg);}
+}
+@keyframes marjvenaxeli{
+    from{transform: rotate(40deg);}
+    to{transform: rotate(-40deg);}
+}
