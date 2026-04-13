@@ -83,7 +83,7 @@ body{
     position: absolute;
     left: 1300px;
     top: 350px;
-    animation: moveperson 7s linear forwards
+    animation: moveperson 4s linear forwards
 }
 .head{
     height: 70px;
